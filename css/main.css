@@ -282,7 +282,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
 .drop {
   align: left !important;
   position: absolute;
@@ -290,28 +289,16 @@ footer a:hover {
   top: 4px;
   width: 23px;
  }
- 
  .front {
   padding-top: 100px !important;
  }
  #new {
-  background: #D1BE70;
-  background: -moz-linear-gradient(top, #D1BE70 0%, #A08546 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D1BE70), color-stop(100%,#A08546));
-  background: -webkit-linear-gradient(top, #D1BE70 0%,#A08546 100%);
-  background: -o-linear-gradient(top, #D1BE70 0%,#A08546 100%);
-  background: -ms-linear-gradient(top, #D1BE70 0%,#A08546 100%);
-  background: linear-gradient(top, #D1BE70);
-  box-shadow: none;
-}
-  #new:hover {
-  background: #D1BE70;
-  background: -moz-linear-gradient(top, #D1BE70 0%, #AD9B4C 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D1BE70), color-stop(100%,#AD9B4C));
-  background: -webkit-linear-gradient(top, #D1BE70 0%,#AD9B4C 100%);
-  background: -o-linear-gradient(top, #D1BE70 0%,#AD9B4C 100%);
-  background: -ms-linear-gradient(top, #D1BE70 0%,#AD9B4C 100%);
-  background: linear-gradient(top, #D1BE70 0%,#AD9B4C 100%);
+ background-image: -moz-linear-gradient(center bottom,#667 0,#D3D3D3 100%);
+ background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#D3D3D3));
+ }
+ #new:hover {
+ background-image: -moz-linear-gradient(center bottom,#667 0,#666 100%);
+ background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#666));
  }
  #save {
   background: #D1BE70;
