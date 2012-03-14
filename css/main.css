@@ -393,3 +393,8 @@ footer a:hover {
 #auth-out:hover {
   color: #D3D3D3;
 }
+.mozlogo {
+  position:absolute;
+  bottom: 10px;
+  left: 45%;
+}
