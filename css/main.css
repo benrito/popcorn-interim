@@ -76,9 +76,9 @@ section {
   left: 0px;
   right: 0px;
   bottom: 30px;
-  -moz-transition: -moz-transform 1s;
-  -webkit-transition: -webkit-transform 1s;
-  -o-transition: -o-transform 1s;
+  -moz-transition: -moz-transform .6s;
+  -webkit-transition: -webkit-transform .6s;
+  -o-transition: -o-transform .6s;
   display: none;
 }
 
@@ -211,8 +211,8 @@ log, a.log {
   height: 38px;
   width: 205px;
   line-height: 38px;
-  background-image: -moz-linear-gradient(center bottom,#667 0,#666 100%);
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#666));
+  background-image: -moz-linear-gradient(center bottom,#667 0,#A5A5AA 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#A5A5AA));
   moz-box-shadow: 0 1px 0 #fff, inset 0 1px 0 #86bf56;
   moz-text-shadow: 0 1px 0 #333;
   o-box-shadow: 0 1px 0 #fff, inset 0 1px 0 #86bf56;
@@ -243,8 +243,8 @@ learn, a.learn {
   height: 38px;
   width: 205px;
   line-height: 38px;
-  background-image: -moz-linear-gradient(center bottom,#667 0,#666 100%);
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#666));
+  background-image: -moz-linear-gradient(center bottom,#667 0,#A5A5AA 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#667),color-stop(1,#A5A5AA));
   moz-box-shadow: 0 1px 0 #fff, inset 0 1px 0 #86bf56;
   moz-text-shadow: 0 1px 0 #333;
   o-box-shadow: 0 1px 0 #fff, inset 0 1px 0 #86bf56;
@@ -397,4 +397,21 @@ footer a:hover {
   position:absolute;
   bottom: 10px;
   left: 45%;
+}
+.navleft {
+background: url(../images/sliders.png) 0 0 no-repeat;
+display: block;
+height: 40px;
+left: 0;
+position: absolute;
+top: 200px;
+width: 40px;
+cursor: pointer;
+overflow: hidden;
+text-indent: -999px;
+}
+.navleft:hover {
+background-position: 0 -60px;
+background-position-x: 0px;
+background-position-y: -60px;
 }

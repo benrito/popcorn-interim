@@ -1,5 +1,5 @@
 section#chooser .templates {
-  padding-top: 30px;
+  padding-top: 20px;
   width: 700px;
   margin: 0 auto;
   position: relative;
@@ -20,12 +20,9 @@ section#chooser li iframe, section#chooser li .iframe-curtain {
   position: absolute;
   top: 20px;
   right: 0px;
-  width: 420px;
+  width: 500px;
   height: 340px;
   display: none;
-  -moz-transform: rotate(-3deg);
-  -webkit-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
 }
 
 section#chooser li iframe {

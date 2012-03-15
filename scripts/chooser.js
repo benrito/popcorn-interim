@@ -4,7 +4,7 @@
     items.mouseenter(function() {
       if (!$(this).find("iframe").length) {
         var a = $(this).find("a");
-        var template = a.attr("href").match(/^#editor\.(.+)$/)[1];
+        var template = a.attr("preview").match(/^#editor\.(.+)$/)[1];
         var iframe = $('<iframe scrolling="no"></iframe>');
         var curtain = $('<div class="iframe-curtain"></div>');
         iframe.attr("src", "templates/" + template + ".html");
