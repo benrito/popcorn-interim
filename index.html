@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="css/chooser.css">
     <link rel="stylesheet" href="css/editor.css">
     <link rel="stylesheet" href="css/publish.css">
-    <link rel="stylesheet" href="css/tabzilla.css"/>
 	<link rel="shortcut icon" href="http://mozillapopcorn.org/wp-content/themes/popcorn/favicon.ico" />
         </head>
   <body>
-  	<!--  <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a> --!>
 
     <header>
       <img src="images/drop.png" class="drop"><a href="#"><h1>Popcorn Maker</h1></a>
@@ -33,8 +31,6 @@
           <aside>This is an alpha-stage app. If you find any bugs, or have suggestions for new features, <a href="#">please let us know</a>! Check out our roadmap and <a href="https://webmademovies.lighthouseapp.com/projects/65733-butter/overview">get involved</a>.
 </aside>
           <a href="#chooser" class="start">Get Started</a>
-          <a href="#" class="log">Log  In</a>
-          <a href="http://mozillapopcorn.org/popcorn-maker/" class="learn">More...</a>
         </div>
       </div>
 <!--		  <img src="images/mozilla.png" class="mozlogo"> --!>
@@ -43,13 +39,19 @@
       <div class="wrapper">
         <h2>Choose a template</h2>
         <p>Popcorn Maker templates are regular HTML + CSS. Don't see one you like? <a href="#">Make your own.</a>
-        <a href="#"><div class="navleft">« left</div></a>
+        
+      !!!!  <a href="#"><div class="navleft">« left</div></a>
+      
         </div>
         <ul class="templates">
-          <li><a href="templates/pop/template.html" preview="#editor.previews/pop_preview">Pop-Up</a>
-          <li><a href="templates/report/template.html" preview="#editor.previews/bookreport_preview">Report</a>
-          <li><a href="#templates/walking/template.html" preview="#editor.previews/walking_preview">Tour</a>
-          <li><a href="#templates/context/template.html" preview="#editor.previews/context_preview">Context</a>
+          <li><a href="butter/templates/pop/template.html" preview="#editor.previews/pop_preview">Pop-Up</a>
+          
+          <li><a href="butter/templates/report/template.html" preview="#editor.previews/bookreport_preview">Report</a>
+          
+          <li><a href="butter/templates/walking/template.html" preview="#editor.previews/walking_preview">Tour</a>
+          
+          <li><a href="butter/templates/context/template.html" preview="#editor.previews/context_preview">Context</a>
+          
         </ul>
       <div style="float:right; padding-right: 25%; padding-top: 150px;"><a href="#">import from JSON...</a></div>
       </div>
@@ -61,7 +63,7 @@
       </div>
     </section>
 
-    <footer>Popcorn Maker is lovingly crafted by Mozilla. <a href="http://github.com/secretrobotron/popcorn-maker">Code</a> is freely available under MIT license. <a href="#">Get in touch!</a></footer>    
+    <footer>Popcorn Maker is lovingly crafted by Mozilla. <a href="http://github.com/mozilla/butter">Code</a> is freely available under MIT license. <a href="#">Get in touch!</a></footer>    
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/yepnope.1.0.2-min.js"></script>
     <script src="scripts/editor.js"></script>
@@ -70,6 +72,5 @@
     <script src="scripts/chooser.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/jquery-ui-1.8.17.custom.min.js"></script>
-    <script src="scripts/tabzilla.js"></script>
   </body>
 </html>
