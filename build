@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd butter
+node make
+cd ..
+mkdir -p public/butter
+cp butter/dist/butter.min.js public/butter
+cp -r butter/dialogs public/butter/dialogs
+cp -r butter/editors public/butter/editors
+cp -r butter/css public/butter/css

@@ -1,0 +1,146 @@
+<!--  This Source Code Form is subject to the terms of the MIT license
+      If a copy of the MIT license was not distributed with this file, you can
+      obtain one at http://www.mozillapopcorn.org/butter-license.txt -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: helvetica !important;
+        color: #fff !important;
+      }
+      p#message {
+        color: #FF0000;
+      }
+    </style>
+    <script type="text/javascript" src="editor.js"></script>
+    <script type="text/javascript">
+      (function(){
+        var _comm = new Comm(),
+            _manifest = {};
+
+        document.addEventListener( "DOMContentLoaded", function( e ){
+
+          function sendData( alsoClose ){
+            alsoClose = !!alsoClose; 
+            var popcornOptions = {};
+            for( var item in _manifest ) {
+              popcornOptions[ item ] = document.getElementById( item ).value;
+            }
+            document.getElementById( "message" ).innerHTML = "";
+            _comm.send( "submit", {
+              eventData: popcornOptions,
+              alsoClose: alsoClose
+            });
+          } //sendData
+
+          function okPressed( e ) {
+            sendData( true );
+          }
+
+          function cancelPressed( e ) {
+            _comm.send( "cancel" );
+          }
+
+          document.addEventListener( "keydown", function( e ) {
+            if( e.keyCode === 13 ) {
+              okPressed( e );
+            } else if( e.keyCode === 27 ) {
+              cancelPressed( e );
+            }
+          }, false);
+
+          _comm.listen( "trackeventupdated", function( e ){
+            for( var item in _manifest ){
+              var element = document.getElementById( item );
+              element.value = e.data[ item ];
+            } //for
+          });
+
+          _comm.listen( "trackeventupdatefailed", function( e ) {
+            if( e.data === "invalidtime" ){
+              document.getElementById( "message" ).innerHTML = "You've entered an invalid start or end time. Please verify that they are both greater than 0, the end time is equal to or less than the media's duration, and that the start time is less than the end time.";
+            } //if
+          });
+
+          _comm.listen( "trackeventdata", function( e ){
+            var popcornOptions = e.data.popcornOptions,
+                targets = e.data.targets,
+                media = e.data.media,
+                mediaName = "Current Media Element";
+
+            if( media && media.name && media.target ){
+              mediaName += " (\"" + media.name + "\": " + media.target + ")";
+            } //if
+
+            _manifest = e.data.manifest.options;
+
+            for( var item in _manifest ) {
+              var row = document.createElement( "TR" ),
+                  col1 = document.createElement( "TD" ),
+                  col2 = document.createElement( "TD" ),
+                  elem = _manifest[ item ].elem;
+
+              var itemLabel = _manifest[ item ].label || item;
+              if( itemLabel === "In" ){
+                itemLabel = "Start (seconds)";
+              }
+              else if( itemLabel === "Out" ){
+                itemLabel = "End (seconds)";
+              } //if
+
+              col1.innerHTML = "<b>" + itemLabel + "</b>";
+
+              if( item === "target" ) {
+                var select = document.createElement( "SELECT" );
+                select.id = "target";
+
+                for( var i = 0, l = targets.length; i < l; i++ ) {
+                  var option = document.createElement( "OPTION" );
+                  option.value = targets[ i ];
+                  option.innerHTML = targets[ i ];
+                  select.appendChild( option );
+                  if( popcornOptions.target === targets[ i ] ) {
+                    select.value = targets[ i ];
+                  }
+                }
+                var option = document.createElement( "OPTION" );
+                option.value = "Media Element";
+                option.innerHTML =  mediaName;
+                select.appendChild( option );
+                if( popcornOptions.target === "Media Element" ) {
+                    select.value = "Media Element";
+                }
+                col2.appendChild( select );
+
+                select.addEventListener( "change", function( e ){
+                  sendData( false );
+                }, false );
+              } else {
+                var newItem = document.createElement( elem );
+                newItem.id = item;
+                newItem.style.width = "100%";
+                newItem.value = popcornOptions[ item ];
+                col2.appendChild( newItem );
+                newItem.addEventListener( "change", function( e ){
+                  sendData( false );
+                }, false );
+              }
+
+              row.appendChild( col1 );
+              row.appendChild( col2 );
+              document.getElementById( "table" ).appendChild( row );
+            }
+          });
+
+        }, false );
+      })();
+    </script>
+  </head>
+  <body>
+    <table id="table">
+    </table>
+    <p id="message"></p>
+  </body>
+</html>
