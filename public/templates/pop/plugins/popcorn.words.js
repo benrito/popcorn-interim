@@ -243,6 +243,11 @@ todo: animate top, left and other styles (color, font size, etc.)
 				elem:'input',
 				type:'number',
 				label:'Right position'
+			},
+			target: {
+				elem:'input',
+				type:'text',
+				label:'Target Element'
 			}/*,
 			onSetup: {
 				type: "function",

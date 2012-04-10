@@ -23,7 +23,8 @@
       "template.js": "http://localhost:8888/templates/pop/template.js",
       "plugins/popcorn.pop.js": "http://localhost:8888/templates/pop/plugins/popcorn.pop.js",
       "plugins/popcorn.words.js": "http://localhost:8888/templates/pop/plugins/popcorn.words.js",
-      "images/": "http://localhost:8888/templates/pop/images/"
+      "images/": "http://localhost:8888/templates/pop/images/",
+      "sounds/": "http://localhost:8888/templates/pop/sounds/"
     }
   }
 }
