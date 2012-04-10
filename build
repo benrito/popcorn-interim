@@ -5,6 +5,11 @@ node make
 cd ..
 mkdir -p public/butter
 cp butter/dist/butter.min.js public/butter
-cp -r butter/dialogs public/butter/dialogs
-cp -r butter/editors public/butter/editors
-cp -r butter/css public/butter/css
+cp butter/dist/butter.js public/butter
+cp -r butter/dialogs public/butter/
+cp -r butter/editors public/butter/
+cp -r butter/css public/butter/
+cp -r butter/config public/butter/
+cp -r butter/resources public/butter/
+mkdir -p public/butter/external/popcorn-js
+cp -r butter/external/popcorn-js/* public/butter/external/popcorn-js/
