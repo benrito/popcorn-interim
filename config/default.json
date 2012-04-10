@@ -16,8 +16,7 @@
     "publishPrefix": "http://localhost:8888/published"
   },
   "environment": {
-    "mode": "development",
-    "defaultUser": "secretrobotron@gmail.com"
+    "mode": "production",
   },
   "templates": {
     "pop": {
