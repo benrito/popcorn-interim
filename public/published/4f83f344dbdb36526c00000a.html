@@ -1,6 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-	<head>
+<html><head>
 		<meta charset="UTF-8">
 		<!-- Set your own title here -->
 		<title>Popcorn.js Pop!</title>
@@ -19,7 +17,7 @@
 		<script src="../../butter/external/popcorn-js/modules/player/popcorn.player.js" type="text/javascript" charset="utf-8"></script>
 		
 		
-		<script src="../../butter/butter.min.js" data-butter-exclude /></script>
+		
 		<script type="text/javascript" src="plugins/popcorn.pop.js"></script>
   	<script type="text/javascript" src="plugins/popcorn.words.js"></script>
   	<script type="text/javascript" src="template.js"></script>
@@ -109,20 +107,19 @@
 		}
 
 		</style>
-	</head>
-	<body>
+	<script src="https://browserid.org/include.js" type="text/javascript" data-butter-exlude="true"></script><script src="plugins/popcorn.pop.js"></script><script src="plugins/popcorn.words.js"></script></head><body class="butter-header-spacing">
 		<div id="scale-buttons">
 			<button id="smaller">-</button>
 			<button id="actual-size">1x</button>
 			<button id="bigger">+</button>
 		</div>
 		<div id="video-container" class="video-js-box">
-			<video id="video" preload class="video-js" data-butter="media" controls>
-				<source src="http://videos-cdn.mozilla.net/serv/webmademovies/popcorntest.ogv" />
+			<video id="video" preload="" class="video-js" controls="" src="http://videos-cdn.mozilla.net/serv/webmademovies/popcorntest.ogv">
+				<source src="http://videos-cdn.mozilla.net/serv/webmademovies/popcorntest.ogv">
 			</video>
-			<div id="pop-container" data-butter="target"></div>
+			<div id="pop-container"></div>
 		</div>
-	</body>
+	
 
     
 	<!--
@@ -149,4 +146,9 @@
 	CC: By
 
 	-->
-</html>
+
+<div id="butter-modal-container"></div><script type="text/javascript">(function(){
+var popcorn = Popcorn.smart( '#video', 'http://videos-cdn.mozilla.net/serv/webmademovies/popcorntest.ogv', {} );
+
+ return popcorn;
+}());</script></body></html>

@@ -1,7 +1,7 @@
 document.addEventListener( "DOMContentLoaded", function( e ){
 
   Butter({
-    config: "../../butter/config/interim.conf",
+    config: "../../butter-config/default.conf",
     ready: function( butter ){
       var media = butter.media[ 0 ];
 

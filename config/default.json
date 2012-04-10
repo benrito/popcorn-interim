@@ -13,7 +13,7 @@
     "wwwRoot": "public",
     "templates": "templates",
     "publish": "public/published",
-    "publishPrefix": "http://localhost:8888/cornfield/"
+    "publishPrefix": "http://localhost:8888/published"
   },
   "environment": {
     "mode": "development",
