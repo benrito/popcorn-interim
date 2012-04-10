@@ -16,7 +16,7 @@
     "publishPrefix": "http://localhost:8888/published"
   },
   "environment": {
-    "mode": "production",
+    "mode": "production"
   },
   "templates": {
     "pop": {
