@@ -3,3 +3,4 @@
 *.bak
 public/butter
 public/published
+npm-debug.log
