@@ -578,6 +578,11 @@ todo: animate top, left and other styles (color, font size, etc.)
         elem:'input',
         type:'text',
         label:'Target Element'
+      },
+      icon: {
+        elem:'input',
+        type:'text',
+        label:'Pop Icon'
       }/*,
       onSetup: {
         type: "function",
