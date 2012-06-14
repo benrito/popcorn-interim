@@ -20,8 +20,8 @@ section#chooser li iframe, section#chooser li .iframe-curtain {
   position: absolute;
   top: 20px;
   right: 0px;
-  width: 500px;
-  height: 340px;
+  width: 480px;
+  height: 270px;
   display: none;
 }
 

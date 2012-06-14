@@ -40,7 +40,7 @@ background-color: #F6F0DC;
 }
 
 header {
-  height: 35px;
+  height: 50px;
   color: #fff;
   background-image: -moz-linear-gradient( center bottom, #2C2C2C 0, #4C4C4C 100% );
   background-image: -webkit-gradient( linear, left bottom, left top, color-stop( 0, #2C2C2C ), color-stop( 1, #4C4C4C ) );
@@ -72,7 +72,7 @@ header h1 span.logo {
 
 section {
   position: absolute;
-  top: 25px;
+  top: 50px;
   left: 0px;
   right: 0px;
   bottom: 30px;
@@ -285,12 +285,12 @@ footer a:hover {
 .drop {
   align: left !important;
   position: absolute;
-  left: 10px;
-  top: 4px;
-  width: 23px;
+  left:25px;
+  top: 0px;
+  width: 115px;
  }
  .front {
-  padding-top: 100px !important;
+  padding-top: 50px !important;
  }
  #new {
  background-image: -moz-linear-gradient(center bottom,#667 0,#D3D3D3 100%);
